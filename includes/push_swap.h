@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:19:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/02/03 16:46:51 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/02/12 13:48:17 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ typedef struct s_stack
 {
 	int				value;
 	int				index;
-	int				pos;
-	int				target_pos;
-	int				cost_a;
-	int				cost_b;
 	struct s_stack	*next;
 }	t_stack;
 

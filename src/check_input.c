@@ -6,7 +6,10 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:40:33 by mherrera          #+#    #+#             */
-/*   Updated: 2026/02/04 13:16:45 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/02/12 14:08:40 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
 
