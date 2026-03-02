@@ -6,26 +6,33 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 13:13:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/02/12 14:25:09 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/02 16:58:36 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h>"
+#include "../includes/push_swap.h"
 
 //radix sort for more than five numbers
-void	radix_sort()
+static void	radix_sort(t_stack **a)
 {
 	
 }
 
 //function that sorts an stack of five numbers
-void	sort_five()
+static void	sort_five(t_stack **a)
 {
 	
 }
 
 //function that sorts an stack of three numbers
-void	sort_three()
+static void	sort_three(t_stack **a)
+{
+	
+}
+
+//function that selects the sorting function to be used
+//it recieves a the 'head' (first node) of the list
+void	sort_function(t_stack **a)
 {
 	
 }
