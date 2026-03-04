@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:08:52 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/04 17:43:04 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/04 18:50:53 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,25 @@ static t_stack	*create_node(long nbr)
 static int	add_nodes(t_stack **a, char **nbrs)
 {
 	long	nbr;
+	t_stack	*new_node;
+	t_stack	*last_node;
 
+	last_node = *a;
+	while (last_node->next)
+		last_node = last_node->next;
 	while (*nbrs)
 	{
 		nbr = ft_atol(*nbrs);
 		if (nbr > INT_MAX)
 			return (1);
+		new_node = create_node(nbr);
+		if (!new_node)
+			return (1);
+		if (*a == NULL)
+			*a = new_node;
+		else
+			last_node->next = new_node;
+		last_node = new_node;
 		nbrs++;
 	}
 	return (0);
@@ -50,6 +63,7 @@ static int	fill_stack(t_stack **a, char **input)
 			return (1);
 		if (!add_nodes(a, nbrs))
 			return (1);
+		ft_free_split(nbrs);
 		input++;
 	}
 	return (0);
