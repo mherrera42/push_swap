@@ -6,12 +6,13 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:34:32 by mherrera          #+#    #+#             */
-/*   Updated: 2026/02/17 14:25:18 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/04 17:40:29 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+//argv + 1 skips the 1st argv (program's name)
 int	main(int argc, char **argv)
 {
 	t_stack	*a;

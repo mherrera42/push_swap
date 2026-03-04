@@ -6,11 +6,21 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 13:59:57 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/02 19:09:38 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/04 16:58:03 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+int	ft_strlen(const char *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
 
 void	ft_putstr_fd(char *msg, int fd)
 {
@@ -41,22 +51,4 @@ long	ft_atol(char *str)
 		i++;
 	}
 	return (result * sign);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*substr;
-
-	if (start >= ft_strlen(s))
-	{
-		len = 0;
-		start = ft_strlen(s);
-	}
-	if (start + len > ft_strlen(s))
-		len = ft_strlen(s) - start;
-	substr = malloc(len + 1);
-	if (!substr)
-		return (NULL);
-	ft_strlcpy(substr, s + start, len + 1);
-	return (substr);
 }

@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 21:32:56 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/02 19:02:59 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/04 17:18:49 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,20 @@ static char	**ft_split_allocate(char *s, char c)
 	split = malloc(sizeof(char *) * (words + 1));
 	if (!split)
 		return (NULL);
-	split[words] = NULL;
+	while (words)
+	{
+		split[words] = NULL;
+		words--;
+	}
 	return (split);
 }
 
-static char	**ft_free_split(char **split, int count)
+char	**ft_free_split(char **split)
 {
 	int	i;
 
 	i = 0;
-	while (i < count)
+	while (split[i])
 	{
 		free(split[i]);
 		i++;
@@ -80,7 +84,7 @@ char	**ft_split(char *s, char c)
 			word_len++;
 		split[i] = ft_substr(s, j, word_len);
 		if (!split[i])
-			return (ft_free_split(split, i));
+			return (ft_free_split(split));
 		j = j + word_len;
 	}
 	return (split);
