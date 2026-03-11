@@ -6,12 +6,13 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:40:33 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/02 18:53:35 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/11 17:15:18 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+//checks the if the char is valid. It must be a sign, a number, or a space
 static int	is_valid_char(char c)
 {
 	if (c == '-' || c == '+' || c == ' ' || (c >= '0' && c <= '9'))
@@ -19,6 +20,7 @@ static int	is_valid_char(char c)
 	return (0);
 }
 
+//checks if the char received as argument is a sign (- or +)
 static int	is_sign(char c)
 {
 	if (c == '-' || c == '+')
@@ -26,6 +28,7 @@ static int	is_sign(char c)
 	return (0);
 }
 
+//checks if the char is a digit (is between 0 and 9, including them)
 static int	is_digit(char c)
 {
 	if (c >= '0' && c <= '9')
@@ -33,6 +36,9 @@ static int	is_digit(char c)
 	return (0);
 }
 
+//checks if the input is valid. It must be a number, or a sign 
+//in a position different from the 1rst, that follows an space, 
+//and is followed by a number
 int	check_input(char **input)
 {
 	int	i;

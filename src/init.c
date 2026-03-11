@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:08:52 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/04 18:50:53 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/11 17:18:08 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static t_stack	*create_node(long nbr)
 	return (node);
 }
 
+//
 static int	add_nodes(t_stack **a, char **nbrs)
 {
 	long	nbr;
@@ -52,6 +53,8 @@ static int	add_nodes(t_stack **a, char **nbrs)
 	return (0);
 }
 
+//receives a pointer to the list's head, and the input (array of strings), and 
+//fills the stack with the numbers in the input, adding 1 node for each number
 static int	fill_stack(t_stack **a, char **input)
 {
 	char	**nbrs;
@@ -69,10 +72,11 @@ static int	fill_stack(t_stack **a, char **input)
 	return (0);
 }
 
+//checks if the input is valid, and if so, fills the stack a with the nbrs
 int	init(t_stack **a, char **input)
 {
 	if (check_input(input) == 1)
 		return (1);
 	if (fill_stack(a, input) == 1)
-		return (1);
+		rehturn (1);
 }
