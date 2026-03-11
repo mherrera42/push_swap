@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 16:56:03 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/04 17:19:21 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:14:50 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_strlcpy(char *dst, char *src, int size)
 	return (ft_strlen(src));
 }
 
-char	*ft_substr(char *s, unsigned int start, int len)
+char	*ft_substr(char *s, int start, int len)
 {
 	char	*substr;
 

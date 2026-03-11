@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:08:52 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/11 17:18:08 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:16:54 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static int	fill_stack(t_stack **a, char **input)
 
 	while (*input)
 	{
-		nbrs = split(input, ' ');
+		nbrs = ft_split(*input, ' ');
 		if (!nbrs)
 			return (1);
 		if (!add_nodes(a, nbrs))
@@ -78,5 +78,6 @@ int	init(t_stack **a, char **input)
 	if (check_input(input) == 1)
 		return (1);
 	if (fill_stack(a, input) == 1)
-		rehturn (1);
+		return (1);
+	return (0);
 }

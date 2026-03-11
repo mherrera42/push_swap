@@ -5,7 +5,14 @@ NAME		= push_swap
 
 # Source Files
 SRC_FILES	= main.c \
-			general_utils.c
+			check_input.c \
+			ft_split.c \
+			split_utils.c \
+			init.c \
+			algorithm.c \
+			general_utils.c \
+			exit_utils.c \
+
 SRC_DIR		= src
 SRC			= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 

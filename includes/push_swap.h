@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:19:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/04 17:21:54 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:15:17 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdlib.h>
 
 typedef struct s_stack
 {
@@ -40,7 +41,7 @@ char	**ft_free_split(char **split);
 char	**ft_split(char *s, char c);
 
 //split_utils.c
-char	*ft_substr(char *s, unsigned int start, int len);
+char	*ft_substr(char *s, int start, int len);
 
 //algorithm
 void	sort_function(t_stack **a);
