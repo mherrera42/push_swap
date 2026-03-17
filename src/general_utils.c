@@ -6,11 +6,34 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 13:59:57 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/04 16:58:03 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:21:05 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+//debugging function
+void	ft_putnbr_fd(int n, int fd)
+{
+	int	nbr;
+
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = n * (-1);
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	nbr = (n % 10) + '0';
+	write(fd, &nbr, 1);
+}
 
 int	ft_strlen(const char *s)
 {

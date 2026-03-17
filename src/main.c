@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:34:32 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/11 18:13:32 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:42:10 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	print_stack(t_stack *a)
 {
 	while (a)
 	{
-		printf("%d\n", a->value);
+		ft_putnbr_fd(a->value, 1);
 		a = a->next;
 	}
 }

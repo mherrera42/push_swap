@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:19:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/11 18:15:17 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:22:24 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack
 }	t_stack;
 
 //general_utils
+void	ft_putnbr_fd(int n, int fd);
 int		ft_strlen(const char *s);
 void	ft_putstr_fd(char *msg, int fd);
 long	ft_atol(char *str);

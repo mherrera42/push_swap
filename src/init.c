@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:08:52 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/11 18:16:54 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:42:01 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ static t_stack	*create_node(long nbr)
 	return (node);
 }
 
-//
+//si la primera vez que se llama a la funcion, el stack esta vacio,	
+//*a = NULL, por lo que last_node es nulo, y al intentar acceder a la
+//direccion de memoria de last_node->next, el programa peta. Por tanto,
+//hay que proteger el primer bucle con un if
 static int	add_nodes(t_stack **a, char **nbrs)
 {
 	long	nbr;
@@ -33,8 +36,11 @@ static int	add_nodes(t_stack **a, char **nbrs)
 	t_stack	*last_node;
 
 	last_node = *a;
-	while (last_node->next)
-		last_node = last_node->next;
+	if (last_node)
+	{
+		while (last_node->next)
+			last_node = last_node->next;
+	}
 	while (*nbrs)
 	{
 		nbr = ft_atol(*nbrs);
