@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:40:33 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/17 17:16:29 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/05/18 17:02:17 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,19 @@ static int	is_valid_char(char c)
 {
 	if (is_sign(c) || is_digit(c) || c == ' ')
 		return (1);
+	return (0);
+}
+
+//traverses the list checking if the numbers in the stack are sorted, pair
+//by pair.
+int	is_sorted(t_stack *a)
+{
+	while (a && a->next)
+	{
+		if (a->value > a->next->value)
+			return (1);
+		a = a->next;
+	}
 	return (0);
 }
 

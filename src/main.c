@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:34:32 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/17 17:42:10 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/05/18 17:10:03 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int	main(int argc, char **argv)
 	if (init(&a, argv + 1) == 1)
 		return (put_err_msg());
 	print_stack(a);
-	// if (!is_sorted(a))
-	// 	sort_stack(&a);
-	// free_stack(a);
+	if (is_sorted(a) == 1)
+		sort_stack(&a);
+	free_stack(a);
 	return (0);
 }

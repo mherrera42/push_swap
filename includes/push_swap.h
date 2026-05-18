@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:19:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/03/17 17:22:24 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/05/18 17:10:14 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		init(t_stack **a, char **input);
 
 //check_input
 int		check_input(char **str);
+int		is_sorted(t_stack *a);
 
 //split.c
 char	**ft_free_split(char **split);
@@ -45,7 +46,7 @@ char	**ft_split(char *s, char c);
 char	*ft_substr(char *s, int start, int len);
 
 //algorithm
-void	sort_function(t_stack **a);
+void	sort_stack(t_stack **a);
 
 //exit_utils.c
 int		put_err_msg(void);
