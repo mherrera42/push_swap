@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:19:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/05/18 17:10:14 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:53:56 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,28 @@ void	sort_stack(t_stack **a);
 
 //exit_utils.c
 int		put_err_msg(void);
+
+//movements_push
+void	ft_push(t_stack *stack);
+void	pa(t_stack *a);
+void	pb(t_stack *b);
+
+//movements_reverse_rotate
+void	ft_reverse_rotate(t_stack *stack);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
+
+//movementes_rotate
+void	ft_rotate(t_stack *stack);
+void	ra(t_stack *a);
+void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
+
+//movements_switch
+void	ft_switch(t_stack *stack);
+void	sa(t_stack *a);
+void	sb(t_stack *b);
+void	ss(t_stack *a, t_stack *b);
 
 #endif
