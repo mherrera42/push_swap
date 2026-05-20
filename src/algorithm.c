@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 13:13:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/05/18 17:37:03 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/05/20 11:38:58 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ static int	stack_size(t_stack *a)
 	return (i);
 }
 
-// //function that sorts an stack of three numbers
+// function that sorts an stack of three numbers
 // static void	sort_three(t_stack **a)
 // {
-
+	
 // }
 
 // //function that sorts an stack of five numbers
