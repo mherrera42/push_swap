@@ -6,22 +6,22 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 13:13:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/05/20 11:38:58 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:28:08 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static int	stack_size(t_stack *a)
+static int	stack_size(t_stack *stack)
 {
 	int	i;
 
 	i = 0;
-	while (a)
+	while (stack)
 	{
 		i++;
-		if (a->next)
-			a = a->next;
+		if (stack->next)
+			stack = stack->next;
 	}
 	return (i);
 }
@@ -45,12 +45,12 @@ static int	stack_size(t_stack *a)
 
 // //function that selects the sorting function to be used
 // //it recieves a the 'head' (first node) of the list
-void	sort_stack(t_stack **a)
+void	sort_stack(t_stack **stack)
 {
-	if (stack_size(a) == 3)
-		sort_three(&a);
-	else if (stack_size(a) <= 5)
-		sort_five(&a);
+	if (stack_size(stack) == 3)
+		sort_three(&stack);
+	else if (stack_size(stack) >= 3 && stack_size(stack) <= 5)
+		sort_five(&stack);
 	else
-		radix_sort(&a);
+		radix_sort(&stack);
 }
