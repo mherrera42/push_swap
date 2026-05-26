@@ -5,12 +5,17 @@ NAME		= push_swap
 
 # Source Files
 SRC_FILES	= main.c \
+			general_utils.c \
 			check_input.c \
+			init.c \
 			ft_split.c \
 			split_utils.c \
-			init.c \
 			algorithm.c \
-			general_utils.c \
+			algorithm_utils.c \
+			movements_push.c \
+			movements_reverse_rotate.c \
+			movements_rotate.c \
+			movements_switch.c \
 			exit_utils.c \
 
 SRC_DIR		= src

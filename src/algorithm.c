@@ -6,33 +6,16 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 13:13:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/05/25 17:24:35 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/05/26 13:48:04 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static int	stack_size(t_stack *stack)
-{
-	int	i;
-
-	i = 0;
-	while (stack)
-	{
-		i++;
-		if (stack->next)
-			stack = stack->next;
-	}
-	return (i);
-}
-
-//function that sorts an stack of three numbers
-//hay que comparar por indices, no por numeros... Es decir, necesito una
-//funcion que asigne indices a los numeros en funcion de su ordem
+//function that sorts an stack of three numbers, comparing it indexes 
+//and hardcoding the movements in order to sort them
 static void	sort_three(t_stack **stack)
 {
-	//if (*stack == 0 && (*stack)->next == 1 && (*stack)->next->next == 2)
-		//nothing happens
 	if (((*stack)->index == 2 && (*stack)->next->index == 1
 			&& (*stack)->next->next->index == 0))
 	{
@@ -60,8 +43,9 @@ static void	sort_three(t_stack **stack)
 // //function that sorts an stack of five numbers
 // static void	sort_five(t_stack **a)
 // {
-		
+
 // }
+
 // //radix sort for more than five numbers
 // static void	radix_sort(t_stack **a)
 // {
