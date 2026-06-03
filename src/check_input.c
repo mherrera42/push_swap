@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:40:33 by mherrera          #+#    #+#             */
-/*   Updated: 2026/05/18 17:02:17 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/06/03 12:42:35 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	is_valid_char(char c)
 }
 
 //traverses the list checking if the numbers in the stack are sorted, pair
-//by pair.
+//by pair
 int	is_sorted(t_stack *a)
 {
 	while (a && a->next)

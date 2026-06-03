@@ -6,12 +6,13 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:08:52 by mherrera          #+#    #+#             */
-/*   Updated: 2026/05/18 16:44:55 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:06:17 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+//create new node to the stack defined in the .h
 static t_stack	*create_node(long nbr)
 {
 	t_stack	*node;
@@ -78,12 +79,37 @@ static int	fill_stack(t_stack **a, char **input)
 	return (0);
 }
 
+//go throught the list, checking if the current node is equal to any of the 
+///next nodes
+static int	has_duplicates(t_stack *a)
+{
+	t_stack	*current_node;
+
+	current_node = a;
+	while (current_node)
+	{
+		while (a)
+		{
+			if (current_node->next->value == a->value)
+				return (1);
+			if (a->next)
+				a = a->next;
+		}
+		a = current_node;
+		if (current_node->next)
+			current_node = current_node->next;
+	}
+	return (0);
+}
+
 //checks if the input is valid, and if so, fills the stack a with the nbrs
 int	init(t_stack **a, char **input)
 {
 	if (check_input(input) == 1)
 		return (1);
 	if (fill_stack(a, input) == 1)
+		return (1);
+	if (has_duplicates(*a) == 1)
 		return (1);
 	return (0);
 }
