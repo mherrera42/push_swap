@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:34:32 by mherrera          #+#    #+#             */
-/*   Updated: 2026/05/18 17:10:03 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/06/04 11:43:27 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ static void	print_stack(t_stack *a)
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
+	t_stack	*b;
 
 	if (argc < 2)
 		return (1);
 	a = NULL;
+	b = NULL;
 	if (init(&a, argv + 1) == 1)
 		return (put_err_msg());
 	print_stack(a);
