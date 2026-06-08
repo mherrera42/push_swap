@@ -6,7 +6,7 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:40:33 by mherrera          #+#    #+#             */
-/*   Updated: 2026/06/03 12:42:35 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/06/04 13:42:16 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ static int	is_valid_char(char c)
 	return (0);
 }
 
-//traverses the list checking if the numbers in the stack are sorted, pair
-//by pair
 int	is_sorted(t_stack *a)
 {
 	while (a && a->next)
@@ -49,9 +47,6 @@ int	is_sorted(t_stack *a)
 	return (0);
 }
 
-//checks if the input is valid. It must be a number, or a sign 
-//in a position different from the 1rst, that follows an space, 
-//and is followed by a number
 int	check_input(char **input)
 {
 	int	i;

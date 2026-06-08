@@ -6,13 +6,13 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:08:52 by mherrera          #+#    #+#             */
-/*   Updated: 2026/06/03 14:06:17 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/06/04 14:04:56 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-//create new node to the stack defined in the .h
+//Create new node to the stack defined in the .h
 static t_stack	*create_node(long nbr)
 {
 	t_stack	*node;
@@ -60,8 +60,8 @@ static int	add_nodes(t_stack **a, char **nbrs)
 	return (0);
 }
 
-//receives a pointer to the list's head, and the input (array of strings), and 
-//fills the stack with the numbers in the input, adding 1 node for each number
+//Receives a pointer to the list's head, and the input (array of strings), and 
+//fills the stack with the numbers in the input, adding 1 node for each number.
 static int	fill_stack(t_stack **a, char **input)
 {
 	char	**nbrs;
@@ -79,8 +79,8 @@ static int	fill_stack(t_stack **a, char **input)
 	return (0);
 }
 
-//go throught the list, checking if the current node is equal to any of the 
-///next nodes
+//Go throught the list, checking if the current node is equal to any of the 
+///next nodes.
 static int	has_duplicates(t_stack *a)
 {
 	t_stack	*current_node;
@@ -102,7 +102,6 @@ static int	has_duplicates(t_stack *a)
 	return (0);
 }
 
-//checks if the input is valid, and if so, fills the stack a with the nbrs
 int	init(t_stack **a, char **input)
 {
 	if (check_input(input) == 1)

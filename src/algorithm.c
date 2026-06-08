@@ -6,14 +6,22 @@
 /*   By: mherrera <mherrera@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 13:13:38 by mherrera          #+#    #+#             */
-/*   Updated: 2026/06/04 11:42:53 by mherrera         ###   ########.fr       */
+/*   Updated: 2026/06/08 13:08:27 by mherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-//function that sorts an stack of three numbers, comparing it indexes 
-//and hardcoding the movements in order to sort them
+//Function that sorts an stack of two numbers, comparing it indexes and
+//changing the order if the first number is minor than the second.
+/*static void	sort_two(t_stack **stack)
+{
+	if ((*stack)->index > (*stack)->next->index)
+		s_stack(stack);
+}*/
+
+//Function that sorts an stack of three numbers, comparing it indexes 
+//and hardcoding the movements in order to sort them.
 static void	sort_three(t_stack **stack)
 {
 	if (((*stack)->index == 2 && (*stack)->next->index == 1
@@ -40,12 +48,19 @@ static void	sort_three(t_stack **stack)
 		rra(stack);
 }
 
-// function that sorts an stack of five numbers
-// static void	sort_five(t_stack **a)
-// {
-//
-// }
+// Function that sorts an stack of five numbers.
+static void	sort_five(t_stack **a, t_stack **b)
+{
+	bring_min_to_top(a);
+	pb(a, b);
+	bring_min_to_top(a);
+	pb(a, b);
+	sort_three(a);
+	pa(a, b);
+	pa(a, b);
+}
 
+//Function that sorts an stack of any numbers, using the radix algorithm.
 static void	radix_sort(t_stack **a, t_stack **b)
 {
 	t_stack	*first_a;
@@ -75,15 +90,13 @@ static void	radix_sort(t_stack **a, t_stack **b)
 	}
 }
 
-// //function that selects the sorting function to be used
-// //it recieves a the 'head' (first node) of the list
 void	sort_stack(t_stack **a, t_stack **b)
 {
 	set_index(*a);
 	if (stack_size(*a) == 3)
 		sort_three(a);
 	else if (stack_size(*a) <= 5)
-		sort_five(a);
+		sort_five(a, b);
 	else
 		radix_sort(a, b);
 }
